@@ -16,7 +16,7 @@ h1 {
 .label {
   font-size: 1em;
 }
-.container {
+body {
   width: 90vw;
   height: 600px;
   display: flex;

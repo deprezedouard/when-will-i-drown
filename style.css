@@ -2,7 +2,13 @@ body {
   background-color: rgba(52, 152, 220, 0.7);
   font-family: Helvetica;
   color: white;
-  font-size: 24px;
+  font-size: 16px;
+}
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 0.5em;
 }
 .container {
   height: 80vh;
@@ -38,13 +44,13 @@ body {
   border: solid 1px white;
   color: white;
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 1em;
   text-align: center;
 }
 
 #location {
-  width: 80vh;
+  width: 80vw;
 }
 
 #button {
@@ -75,7 +81,7 @@ body {
 }
 ::placeholder {
   color: white;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 300;
   opacity: 0.4;
 }

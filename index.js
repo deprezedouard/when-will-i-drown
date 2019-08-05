@@ -40,7 +40,7 @@ const fetchCoordinates = (input) => {
 
 const getLocation = (input) => {
   if (input !== '') {
-    place = input;
+    place = `If you live in ${input}, you`;
     startString = `'${input}' is currently `;
     fetchCoordinates(input);
   } else {

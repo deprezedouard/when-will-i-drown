@@ -16,13 +16,13 @@ const fetchAltitude = (input) => {
       if(((data[0].elevation * 1000) + size * 10) > 7000) {
         if(solution.classList.contains('red')) { solution.classList.remove('red');}
         solution.classList.add('green');
-        solution.innerHTML = `${startString}${parseInt(data[0].elevation, 10)} meters above sea level!<br> ${place} will not drown in the coming 1000 years!`;
+        solution.innerHTML = `${startString}${parseInt(data[0].elevation, 10)} meters above sea level.<br> ${place} will not drown in the coming 1000 years!`;
       } else {
         const currentYear = parseInt(new Date().getFullYear(), 10);
         const deathYear = parseInt(((((data[0].elevation * 1000) + size * 10) / 7) + currentYear));
         if(solution.classList.contains('green')) { solution.classList.remove('green');}
         solution.classList.add('red')
-        solution.innerHTML = `${startString}${parseInt(data[0].elevation, 10)} meters above sea level!
+        solution.innerHTML = `${startString}${parseInt(data[0].elevation, 10)} meters above sea level.
         <br>
         ${place} will drown in the year <strong>${deathYear}</strong>!`;
       }

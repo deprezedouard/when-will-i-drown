@@ -1,6 +1,5 @@
 const jawgApiKey = '&access-token=w8nijIBK16cjLbibUeS9wGUMmafAPEoIOkhkb3Yl1VSt6X2kbgpwjcjlrlZpfYaK';
 const jawgUrl = 'https://cors-anywhere.herokuapp.com/https://api.jawg.io/elevations?locations=';
-
 const mapBoxApiKey = '.json?access_token=pk.eyJ1IjoiZGVwcmV6ZWRvdWFyZCIsImEiOiJjanlrMTljYmIwMDRsM2xxcXpvN3d2Z3FqIn0.6TRhVAm3CyhuueZNEuCkqw';
 const mapBoxUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
 const solution = document.getElementById('solution');
@@ -10,7 +9,6 @@ let place = '';
 
 
 const fetchAltitude = (input) => {
-  console.log(input);
   size = parseInt(document.getElementById('size').value, 10);
   fetch(jawgUrl + input + jawgApiKey)
     .then(response => response.json())

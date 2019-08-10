@@ -12,7 +12,13 @@ let startString = 0;
 let place = '';
 let riseLevel = 29;
 
-document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+
+window.addEventListener("orientationchange", function() {
+  if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+    document.documentElement.innerHTML = document.documentElement.innerHTML;
+  }
+}, false);
+
 
 const fetchAltitude = (input) => {
   size = parseInt(document.getElementById('size').value, 10);

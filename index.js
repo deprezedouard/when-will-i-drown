@@ -12,7 +12,7 @@ let startString = 0;
 let place = '';
 let riseLevel = 29;
 
-
+document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
 
 const fetchAltitude = (input) => {
   size = parseInt(document.getElementById('size').value, 10);

@@ -7,9 +7,10 @@
   --sea: #507DBC;
 }
 
-
-body {
+html {
   overflow: hidden;
+}
+body {
   max-height: 100%;
   background-color: var(--sky);
   font-family: Helvetica;

@@ -11,21 +11,46 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Sea levels are rising fast.</h1>
-    <h1>Find out when you will drown!</h1>
-    <br>
-    <form action="#" class="form">
-      <div class="input">
-        <label class="label" for="size">To calculate when the water will reach your head, we need to know how tall you are. (in cm)</label>
-        <input id="size" class="input-field" type="number" name="size" min="0" max="230" placeholder="" value="180">
+    <div class="header">
+      <div class="title">
+        <h1>Sea levels will rise 7 meters in the next 1000 years.</h1>
+        <h1>Find out when you will drown!</h1>
       </div>
-      <div class="input">
-        <label class="label" for="location">Where are you?</label>
-        <input id="location" name="location" type="text" class="input-field" placeholder="leave this field empty to use your current location">
+    </div>
+    <img id="person" src="person.png" alt="">
+    <div id="sea" class=""></div>
+    <div id="back-container" class="frame">
+      <div class="sky">
       </div>
-      <input id="button" type="submit" value="When Will I Drown?">
-    </form>
-    <div id="solution" class="green"></div>
+      <div class="front-land">
+        <div class="left land"></div>
+        <div class="incline-container">
+          <div class="incline land"></div>
+        </div>
+        <div class="right land"></div>
+      </div>
+      <div class="underground land">
+        <div id="solution" class="">This is what's going to happen!</div>
+      </div>
+
+    </div>
+
+    <div id="front-container" class="frame">
+      <br>
+      <form action="#" class="form">
+        <div class="input">
+          <label class="label" for="size">To calculate when the water will reach your head, we need to know how tall you are. (in cm)</label>
+          <input id="size" class="input-field" type="number" name="size" min="0" max="230" placeholder="" value="180">
+        </div>
+        <div class="input">
+          <label class="label" for="location">Where are you?</label>
+          <input id="location" name="location" type="text" class="input-field" placeholder="leave this field empty to use your current location">
+        </div>
+        <input id="button" type="submit" value="When Will I Drown?">
+      </form>
+      <div id="calculation"></div>
+    </div>
+
   <script src="index.js"></script>
   </body>
 </html>

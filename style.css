@@ -1,5 +1,5 @@
 :root {
-  --result: 28vh;
+  --result: 44vh;
   --white: #FDFFFC;
   --underground: #D4CB92;
   --main-color: #091540;
@@ -36,11 +36,14 @@ h1 {
 .header {
   position: absolute;
   top: 0;
-  height: 30%;
+  height: 40vh;
   padding: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+}
+.hidden {
+  display: none;
 }
 .title {
   padding: 5vw;
@@ -86,7 +89,7 @@ h1 {
   max-width: 400px;
 }
 
-#button {
+.button {
   background-color: var(--sea);
   border: solid 2px var(--white);
   border-radius: 50px;
@@ -96,7 +99,7 @@ h1 {
   padding: 15px 25px;
   opacity: 0.8;
 }
-#button:hover {
+.button:hover {
   opacity: 1;
 }
 
@@ -116,8 +119,11 @@ h1 {
 .frame {
   position: absolute;
   bottom: 0px;
-  height: 70%;
+  height: 60vh;
   width: 100vw;
+}
+.front-frame {
+  height: 70vh;
 }
 
 #front-container {
@@ -151,7 +157,7 @@ h1 {
   position: absolute;
   height: 10vh;
   right: 15vw;
-  top: 35%;
+  top: 45vh;
 }
 .front-land {
   display: flex;
@@ -177,12 +183,12 @@ h1 {
   align-items: flex-start;
   justify-content: center;
   background-color: var(--underground);
-  height: 35vh;
+  height: 15vh;
 }
 
 #sea {
   position: absolute;
-  top: 77vh;
+  top: 82vh;
   background-color: var(--sea);
   opacity: 0.8;
   height: 50%;
@@ -214,7 +220,7 @@ h1 {
 @keyframes slide-in {
   from {
     position: absolute;
-    top: 77vh;
+    top: 82vh;
   }
   to {
     position: absolute;

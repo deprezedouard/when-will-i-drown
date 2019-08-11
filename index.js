@@ -6,33 +6,34 @@ const frontContainer = document.getElementById('front-container');
 const sea = document.getElementById('sea');
 const calculation = document.getElementById('calculation');
 const solution = document.getElementById('solution');
+const title = document.getElementById('title');
 let root = document.documentElement;
 let size = 0;
 let startString = 0;
 let place = '';
-let riseLevel = 34;
+let riseLevel = 44;
+
 
 const fetchAltitude = (input) => {
   size = parseInt(document.getElementById('size').value, 10);
   fetch(jawgUrl + input + jawgApiKey)
     .then(response => response.json())
     .then((data) => {
+      title.classList.add('hidden');
       frontContainer.classList.add('slide-out');
       let elevation = ((data[0].elevation * 1000) + size * 10);
       if(elevation > 7000) {
-        riseLevel = 73 - Math.round((7000 * 38 / elevation));
+        riseLevel = 82 - Math.round((7000 * 38 / elevation));
         console.log(riseLevel);
         calculation.innerText = 'Calculated!';
-        solution.classList.add('green');
-        solution.innerHTML = `${startString}${parseInt(data[0].elevation, 10)} meters above sea level.<br> ${place} will not drown in the coming 1000 years!`;
+        title.innerHTML = `${startString}${parseInt(data[0].elevation, 10)} meters above sea level. <br> ${place} will not drown in the coming 1000 years!`;
+        title.classList.add('green');
       } else {
         const currentYear = parseInt(new Date().getFullYear(), 10);
         const deathYear = parseInt(((elevation / 7) + currentYear));
         calculation.innerText = 'Calculated!';
-        solution.classList.add('red');
-        solution.innerHTML = `<div>${startString}${parseInt(data[0].elevation, 10)} meters above sea level.
-          <br>
-          ${place} will drown in the year:</div><div class="death-year">${deathYear}</div>`;
+        title.innerHTML = `<div>${startString}${parseInt(data[0].elevation, 10)} meters above sea level. <br> ${place} will drown in the year:</div><div class="death-year">${deathYear}</div>`;
+        title.classList.add('red');
       }
       root.style.setProperty('--result', riseLevel + "vh");
       sea.classList.add('slide-in');
@@ -68,4 +69,8 @@ button.addEventListener('click', (event) => {
   calculation.innerHTML = 'Calculating...'
   const location = document.getElementById('location').value;
   getLocation(location);
+});
+
+sea.addEventListener('animationend', () => {
+  title.classList.remove('hidden');
 });

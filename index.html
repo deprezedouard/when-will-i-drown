@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="header">
-      <div class="title">
+      <div id="title" class="title">
         <h1>Sea levels will rise 7 meters in the next 1000 years.</h1>
         <h1>Find out when you will drown!</h1>
       </div>
@@ -30,12 +30,12 @@
         <div class="right land"></div>
       </div>
       <div class="underground land">
-        <div id="solution" class="">This is what's going to happen!</div>
+        <div id="reload" class="button">Try again!</div>
       </div>
 
     </div>
 
-    <div id="front-container" class="frame">
+    <div id="front-container" class="frame front-frame">
       <br>
       <form action="#" class="form">
         <div class="input">
@@ -46,7 +46,7 @@
           <label class="label" for="location">Where are you?</label>
           <input id="location" name="location" type="text" class="input-field" placeholder="leave this field empty to use your current location">
         </div>
-        <input id="button" type="submit" value="When Will I Drown?">
+        <input id="button" class="button" type="submit" value="When Will I Drown?">
       </form>
       <div id="calculation"></div>
     </div>

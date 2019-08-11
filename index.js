@@ -10,7 +10,7 @@ let root = document.documentElement;
 let size = 0;
 let startString = 0;
 let place = '';
-let riseLevel = 39;
+let riseLevel = 34;
 
 const fetchAltitude = (input) => {
   size = parseInt(document.getElementById('size').value, 10);
@@ -20,7 +20,7 @@ const fetchAltitude = (input) => {
       frontContainer.classList.add('slide-out');
       let elevation = ((data[0].elevation * 1000) + size * 10);
       if(elevation > 7000) {
-        riseLevel = 77 - Math.round((7000 * 38 / elevation));
+        riseLevel = 73 - Math.round((7000 * 38 / elevation));
         console.log(riseLevel);
         calculation.innerText = 'Calculated!';
         solution.classList.add('green');

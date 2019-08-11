@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
 :root {
   --result: 44vh;
   --white: #FDFFFC;
@@ -13,7 +15,7 @@ html {
 body {
   height: 100vh;
   background-color: var(--sky);
-  font-family: Helvetica;
+  font-family: 'Lexend Deca', sans-serif;
   color: var(--white);
   font-weight: 300;
   font-size: 18px;
@@ -91,6 +93,7 @@ h1 {
 }
 
 .button {
+  font-family: 'Lexend Deca', sans-serif;
   background-color: var(--sea);
   border: solid 2px var(--white);
   border-radius: 50px;
